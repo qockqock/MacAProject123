@@ -1,13 +1,6 @@
 //
-//  BottomTabView.swift
-//  MacAProject
+// MenuController.swift
+// MacAProject
 //
-//  Created by DEUKRYEONG LEE on 7/3/24.
+// Created by 머성이 on 7/3/24.
 //
-
-import UIKit
-import SnapKit
-
-class BottomTabView:UIView {
-    d
-}
