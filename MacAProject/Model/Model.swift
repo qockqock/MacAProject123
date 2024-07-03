@@ -78,7 +78,6 @@ extension CoffeeList{
     ]
 
 //    static let pong_crush_Menu = [
-    // 지우기
 //        CoffeeList(imageName: "choco_Honey_PongCrush", menuName: "초코허니퐁크러쉬", menuPrice: 5300),
 //        CoffeeList(imageName: "banana_PongCrush", menuName: "바나나퐁크러쉬", menuPrice: 5200),
 //        CoffeeList(imageName: "strawberry_PongCrush", menuName: "딸기퐁크러쉬", menuPrice: 5400),
