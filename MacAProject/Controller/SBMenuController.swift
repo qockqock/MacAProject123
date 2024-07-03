@@ -16,6 +16,10 @@ class SBMenuController: UIViewController, UICollectionViewDataSource, UICollecti
         return cv
     }()
     
+    // 이미지 배열
+    let img = CoffeeList.smoothie_Menu
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 컬렉션 뷰를 서브뷰로 추가
@@ -36,19 +40,22 @@ class SBMenuController: UIViewController, UICollectionViewDataSource, UICollecti
             make.bottom.equalToSuperview().offset(-20)
         }
         // 셀 등록
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(MenuView.self, forCellWithReuseIdentifier: "img")
     }
     
     // UICollectionViewDataSource 메서드
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6 // 예시 항목 개수
+        return img.count // 예시 항목 개수
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .black
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "img", for: indexPath) as! MenuView
+        let menuItem = img[indexPath.item]
+        cell.imgView.image = UIImage(named: menuItem.imageName)
         return cell
     }
+    
+    
     
     // UICollectionViewDelegateFlowLayout 메서드
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -63,23 +70,24 @@ class SBMenuController: UIViewController, UICollectionViewDataSource, UICollecti
     }
 }
 
-struct PreView: PreviewProvider {
-    static var previews: some View {
-        SBMenuController().toPreview()
-    }
-}
-#if DEBUG
-extension UIViewController {
-    private struct Preview: UIViewControllerRepresentable {
-        let viewController: UIViewController
-        func makeUIViewController(context: Context) -> UIViewController {
-            return viewController
-        }
-        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        }
-    }
-    func toPreview() -> some View {
-        Preview(viewController: self)
-    }
-}
-#endif
+
+//struct PreView: PreviewProvider {
+//    static var previews: some View {
+//        SBMenuController().toPreview()
+//    }
+//}
+//#if DEBUG
+//extension UIViewController {
+//    private struct Preview: UIViewControllerRepresentable {
+//        let viewController: UIViewController
+//        func makeUIViewController(context: Context) -> UIViewController {
+//            return viewController
+//        }
+//        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+//        }
+//    }
+//    func toPreview() -> some View {
+//        Preview(viewController: self)
+//    }
+//}
+//#endif
