@@ -69,12 +69,12 @@ extension CoffeeList{
     ]
 
     static let tea_Menu = [
-        CoffeeList(imageName: "wm_Juice", menuName: "수박주스", menuPrice: 5000),
-        CoffeeList(imageName: "bsbubblemt_Icedlatte", menuName: "흑당버블밀크티아이스라떼", menuPrice: 5500),
-        CoffeeList(imageName: "bs_Icedbubblelatte", menuName: "흑당아이스버블라떼", menuPrice: 5500),
-        CoffeeList(imageName: "cucumber_Limemojito", menuName: "오이오이라임오히또", menuPrice: 4800),
-        CoffeeList(imageName: "grapefruit_honey_bt_Iced", menuName: "아이스허니자몽블랙티", menuPrice: 4900),
-        CoffeeList(imageName: "ggultip_Option", menuName: "꿀팁옵션", menuPrice: 5000)
+        CoffeeList(imageName: "chamomile_Tea", menuName: "캐모마일티", menuPrice: 5000),
+        CoffeeList(imageName: "citron_Tea", menuName: "유자차", menuPrice: 5500),
+        CoffeeList(imageName: "earlGrey_Tea", menuName: "얼그레이티", menuPrice: 5500),
+        CoffeeList(imageName: "green_Tea", menuName: "녹차", menuPrice: 4800),
+        CoffeeList(imageName: "honey_Grapefruit_BlackTea", menuName: "허니자몽블랙티", menuPrice: 4900),
+        CoffeeList(imageName: "royal_Milk_Tea", menuName: "로얄밀크티", menuPrice: 5000)
     ]
 
 //    static let pong_crush_Menu = [
