@@ -6,5 +6,20 @@
 //
 
 import UIKit
-import SnapKit
 
+
+class CategoryView: UIView {
+ 
+    var logo: UIImageView // UIImage는 이미지일뿐, UIImageView는 사진을 보여줄 공간을 만드는 것
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
