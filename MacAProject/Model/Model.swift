@@ -15,7 +15,7 @@ struct CoffeeList{
 
 extension CoffeeList{
     static let recommended_Menu = [
-        CoffeeList(imageName: "plain_Pong_Crush", menuName: "플레인퐁크러쉬", menuPrice: 4500),
+        CoffeeList(imageName: "plain_PongCrush", menuName: "플레인퐁크러쉬", menuPrice: 4500),
         CoffeeList(imageName: "iced_Cue_Brat", menuName: "아이스큐브라떼", menuPrice: 5200),
         CoffeeList(imageName: "grapefruit_Ade", menuName: "자몽에이드", menuPrice: 4800),
         CoffeeList(imageName: "iced_Apple_and_Citrus_Tea", menuName: "아이스사과유자차", menuPrice: 5000),
@@ -24,12 +24,12 @@ extension CoffeeList{
     ]
 
     static let smoothie_Menu = [
-        CoffeeList(imageName: "Golden_Mango_Smoothie", menuName: "골드망고스무디", menuPrice: 5800),
-        CoffeeList(imageName: "Strawberry_Yogurt_Smoothie", menuName: "딸기요거트스무디", menuPrice: 5500),
-        CoffeeList(imageName: "Strawberry_Cookie_Frappe", menuName: "딸기쿠키프라페", menuPrice: 5700),
-        CoffeeList(imageName: "Cookie_Frappe", menuName: "쿠키프라페", menuPrice: 5600),
-        CoffeeList(imageName: "Coconut_Coffee_Smoothie", menuName: "코코넛커피스무디", menuPrice: 5900),
-        CoffeeList(imageName: "Mint_Frappe", menuName: "민트프라페", menuPrice: 5400)
+        CoffeeList(imageName: "golden_Mango_Smoothie", menuName: "골드망고스무디", menuPrice: 5800),
+        CoffeeList(imageName: "strawberry_Yogurt_Smoothie", menuName: "딸기요거트스무디", menuPrice: 5500),
+        CoffeeList(imageName: "strawberry_Cookie_Frappe", menuName: "딸기쿠키프라페", menuPrice: 5700),
+        CoffeeList(imageName: "cookie_Frappe", menuName: "쿠키프라페", menuPrice: 5600),
+        CoffeeList(imageName: "coconut_Coffee_Smoothie", menuName: "코코넛커피스무디", menuPrice: 5900),
+        CoffeeList(imageName: "mint_Frappe", menuName: "민트프라페", menuPrice: 5400)
     ]
 
     static let coffee_Menu = [
