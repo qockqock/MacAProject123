@@ -30,7 +30,10 @@ class SBMenuController: UIViewController, UICollectionViewDataSource, UICollecti
     func configureCollectionView() {
         // SnapKit을 사용하여 컬렉션 뷰의 레이아웃 설정
         collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview().offset(180)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(-20)
         }
         // 셀 등록
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -49,34 +52,34 @@ class SBMenuController: UIViewController, UICollectionViewDataSource, UICollecti
     
     // UICollectionViewDelegateFlowLayout 메서드
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100) // 예시 항목 크기
+        return CGSize(width: 110, height: 110) // 예시 항목 크기
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5 // 예시 줄 간격
+        return 80 // 줄 간격
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5 // 예시 항목 간격
+        return 5 // 항목 간격
     }
 }
 
 struct PreView: PreviewProvider {
- static var previews: some View {
-   Menu().toPreview()
- }
+    static var previews: some View {
+        SBMenuController().toPreview()
+    }
 }
 #if DEBUG
 extension UIViewController {
- private struct Preview: UIViewControllerRepresentable {
-   let viewController: UIViewController
-   func makeUIViewController(context: Context) -> UIViewController {
-    return viewController
-   }
-   func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-   }
-  }
-  func toPreview() -> some View {
-   Preview(viewController: self)
-  }
+    private struct Preview: UIViewControllerRepresentable {
+        let viewController: UIViewController
+        func makeUIViewController(context: Context) -> UIViewController {
+            return viewController
+        }
+        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        }
+    }
+    func toPreview() -> some View {
+        Preview(viewController: self)
+    }
 }
 #endif
